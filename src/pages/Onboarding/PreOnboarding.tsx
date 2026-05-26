@@ -302,9 +302,9 @@ export function PreOnboarding() {
                 <div className="border-b border-gray-200 dark:border-dark-700 pb-4">
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">Joining Details</h3>
                   <div className="space-y-2 text-sm mb-3">
-                    <p><span className="font-medium text-gray-900 dark:text-white">Date:</span> {selectedCandidate.joiningDate}</p>
-                    <p><span className="font-medium text-gray-900 dark:text-white">Manager:</span> {selectedCandidate.reportingManager}</p>
-                    <p><span className="font-medium text-gray-900 dark:text-white">Department:</span> {selectedCandidate.department}</p>
+                    <p><span className="font-medium text-gray-900 dark:text-white">Date:</span> <span className="text-gray-900 dark:text-white">{selectedCandidate.joiningDate}</span></p>
+                    <p><span className="font-medium text-gray-900 dark:text-white">Manager:</span> <span className="text-gray-900 dark:text-white">{selectedCandidate.reportingManager}</span></p>
+                    <p><span className="font-medium text-gray-900 dark:text-white">Department:</span> <span className="text-gray-900 dark:text-white">{selectedCandidate.department}</span></p>
                   </div>
                   <button onClick={() => {
                     handleConfirmJoining(selectedCandidate.id);
