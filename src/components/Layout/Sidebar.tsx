@@ -235,7 +235,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
                     </button>
 
                     {/* Submenu */}
-                    <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0'}`}>
                       <div className="ml-3 mt-1 mb-1 border-l-2 border-red-200 dark:border-red-900/30 pl-3 space-y-0.5">
                         {item.submenu!.map((sub, subIdx) => {
                           const SubIcon = sub.icon;

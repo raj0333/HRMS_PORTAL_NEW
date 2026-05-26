@@ -73,7 +73,7 @@ export function Header({ isOpen, onToggle }: HeaderProps) {
                 <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-3 font-semibold">
                   Notifications
                 </div>
-                <div className="max-h-96 overflow-y-auto scrollbar-thin divide-y divide-gray-200 dark:divide-dark-700">
+                <div className="max-h-fit overflow-y-auto scrollbar-thin divide-y divide-gray-200 dark:divide-dark-700">
                   {mockNotifications.map(notif => (
                     <div key={notif.id} className="px-4 py-3 hover:bg-gray-50 dark:hover:bg-dark-700 transition cursor-pointer">
                       <div className="flex items-start gap-3">

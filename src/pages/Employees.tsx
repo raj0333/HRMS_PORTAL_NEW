@@ -190,8 +190,8 @@ export function Employees() {
 
       {/* Add Modal */}
       {showAddModal && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-dark-800 rounded-xl p-6 w-full max-w-2xl border border-gray-200 dark:border-dark-700 max-h-96 overflow-y-auto scrollbar-thin">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-0 !m-0">
+          <div className="bg-white dark:bg-dark-800 rounded-xl p-6 w-full max-w-2xl border border-gray-200 dark:border-dark-700 max-h-fit overflow-y-auto scrollbar-thin">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Add New Employee</h2>
               <button onClick={() => setShowAddModal(false)} className="text-gray-400 hover:text-gray-600">
@@ -271,8 +271,8 @@ export function Employees() {
 
       {/* Edit Modal */}
       {showEditModal && selectedEmployee && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-dark-800 rounded-xl p-6 w-full max-w-2xl border border-gray-200 dark:border-dark-700 max-h-96 overflow-y-auto scrollbar-thin">
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-0 !m-0">
+          <div className="bg-white dark:bg-dark-800 rounded-xl p-6 w-full max-w-2xl border border-gray-200 dark:border-dark-700 max-h-fit overflow-y-auto scrollbar-thin">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Edit Employee</h2>
               <button onClick={() => setShowEditModal(false)} className="text-gray-400 hover:text-gray-600">
