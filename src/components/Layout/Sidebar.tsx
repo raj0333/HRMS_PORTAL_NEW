@@ -183,7 +183,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         {/* Logo */}
         <div className={`sticky top-0 py-3 ${isOpen ? 'px-6' : 'px-5'} bg-gradient-to-r from-gray-50 to-gray-100 dark:from-dark-700 dark:to-dark-800 border-b border-gray-200 dark:border-dark-700 flex items-center gap-3 z-10 transition-all duration-300`}>
           <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center flex-shrink-0">
-            <img src="/logo.png" alt="HRMS" className="w-6 h-6" />
+            <img src="/logo.png" alt="HRMS" className="w-[1.9rem] h-[1.9rem]" />
           </div>
           <div className={`transition-all duration-300 whitespace-nowrap overflow-hidden ${isOpen ? 'opacity-100 w-auto' : 'opacity-0 w-0'}`}>
             <h1 className="font-bold text-gray-900 dark:text-white text-lg">HITO</h1>
