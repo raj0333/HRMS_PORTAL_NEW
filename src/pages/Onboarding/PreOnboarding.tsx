@@ -25,8 +25,8 @@ export function PreOnboarding() {
   const [candidates, setCandidates] = useState<Candidate[]>([
     {
       id: '1',
-      name: 'Rahul Sharma',
-      email: 'rahul@example.com',
+      name: 'Anshul Awasthi',
+      email: 'anshula@hoshodigital.com',
       phone: '+91 9876543210',
       position: 'Software Engineer',
       department: 'IT',
@@ -43,13 +43,14 @@ export function PreOnboarding() {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    name: 'Anshul Awasthi',
+    email: 'anshula@hoshodigital.com',
     phone: '',
     position: '',
     department: '',
     joiningDate: '',
     reportingManager: '',
+    employeeId: '',
   });
 
   const handleAddCandidate = () => {
@@ -62,7 +63,16 @@ export function PreOnboarding() {
         bgvStatus: 'pending',
       };
       setCandidates([...candidates, newCandidate]);
-      setFormData({ name: '', email: '', phone: '', position: '', department: '', joiningDate: '', reportingManager: '' });
+      setFormData({ 
+        name: 'Anshul Awasthi', 
+        email: 'anshula@hoshodigital.com', 
+        phone: '', 
+        position: '', 
+        department: '', 
+        joiningDate: '', 
+        reportingManager: '',
+        employeeId: ''
+      });
       setShowAddModal(false);
     }
   };
@@ -196,7 +206,16 @@ export function PreOnboarding() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
+                placeholder="Employee ID"
+                value={formData.employeeId}
+                onChange={(e) => setFormData({ ...formData, employeeId: e.target.value })}
+                className="px-4 py-2.5 border border-gray-300 dark:border-dark-600 rounded-lg dark:bg-dark-700 dark:text-white focus:ring-2 focus:ring-red-500"
+              />
+              <input
+                type="text"
                 placeholder="Full Name"
+                name="name"
+                autoComplete="off"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="px-4 py-2.5 border border-gray-300 dark:border-dark-600 rounded-lg dark:bg-dark-700 dark:text-white focus:ring-2 focus:ring-red-500"
@@ -204,6 +223,8 @@ export function PreOnboarding() {
               <input
                 type="email"
                 placeholder="Email"
+                name="email"
+                autoComplete="off"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="px-4 py-2.5 border border-gray-300 dark:border-dark-600 rounded-lg dark:bg-dark-700 dark:text-white focus:ring-2 focus:ring-red-500"
